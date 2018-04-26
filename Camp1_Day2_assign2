@@ -1,1 +1,23 @@
+#Number Game
 
+import random
+
+guesses = 3
+number = random.randint(1, 10)
+win = False
+
+while guesses > 0:
+    guess = int(input("Guess the number: "))
+	
+    if guess > number:
+	    print("Wrong, try again!", guesses, "remaining")
+    if guess < number:
+	    print("Wrong, try again!", guesses, "remaining")
+    else:
+	    print("Correct!")
+	    win = True
+	    guesses = 0
+		
+    guesses -= 1
+if win == False:
+        print("Sorry, the number was", number
